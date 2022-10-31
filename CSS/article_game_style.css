@@ -1,0 +1,288 @@
+/* ======================================== article Main CSS ======================================== */
+
+body {
+    background-image: url("../Image/BackGround/GameBG3.png");
+    /* background-size: cover; */
+
+    /* 控制圖片是否能隨著滾輪滾動。scroll是可以，fixed是不行。 */
+    /* background-attachment: scroll; */
+    background-attachment: scroll;
+    background-position: center -180px;
+    background-repeat: no-repeat;
+
+}
+
+/* ======================================== article Main CSS ======================================== */
+
+body .game_art {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    /* 預留選單固定高度。 */
+    /* margin-top: 72px; */
+
+    /* 高度預抓。 */
+    height: 950px;
+    /* 示意使用。 */
+    /* border: 1px solid red; */
+
+}
+
+.game_art .game_art_left {
+    width: var(--theme_horizontal_left_width);
+
+    /* 示意使用。 */
+    height: 300px;
+    /* background-color: blue; */
+}
+
+.game_art .game_art_right {
+    width: var(--theme_horizontal_cell_width);
+
+    /* 示意使用。 */
+    height: 300px;
+    /* background-color: lawngreen; */
+}
+
+.game_art .game_art_center {
+
+    flex: 1;
+    height: 100%;
+
+    /* 示意使用。 */
+    /* border: 1px solid yellow; */
+}
+
+
+/* ======================================== article top game style ======================================== */
+
+
+body .game_art_top {
+
+    background-image: url("../Image/BackGround/Cowboy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+
+    width: 100%;
+    height: 780px;
+
+    position: relative;
+
+    /* 預留選單固定高度。 */
+    margin-top: 72px;
+
+    /* 示意使用。 */
+    /* border: 1px solid aqua; */
+
+}
+
+body .game_art_top::after {
+    /* 模糊 */
+    backdrop-filter: blur(5px);
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.u-non-blurred {
+    position: relative;
+    z-index: 1;
+}
+
+.game_art_top .game_sccont {
+    width: 1280px;
+    height: 720px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* background-color: blueviolet; */
+}
+
+.game_sccont .scg_frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ======================================== article game content ======================================== */
+
+/* 圖片框。 */
+.game_art .game_art_center .game_art_logo {
+    width: 100%;
+    height: 200px;
+
+    position: relative;
+
+    /* background-color: aquamarine; */
+}
+
+/* 圖片位置。 */
+.game_art_center .game_art_logo img {
+    height: 100%;
+    object-fit: contain;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game_art .game_art_center .game_art_illustrate {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    /* 示意用。 */
+    height: 800px;
+    /* border: 1px solid blueviolet; */
+}
+
+/* 遊戲資料、風格特色標題 */
+.game_art_illustrate .game_art_illustrate_title h3 {
+    font-size: 24px;
+    text-shadow: var(--theme_text_shadow);
+    color: var(--theme_color_gold);
+    letter-spacing: 2px;
+    font-weight: 700;
+
+    margin: 20px;
+}
+
+/* 中央留空。 */
+.game_art_center .game_art_illustrate .game_art_blank {
+    width: 100px;
+}
+
+.game_art_center .game_art_illustrate .game_art_data {
+
+    flex: 1;
+
+    /* border: 1px solid brown; */
+}
+
+/* 每一格遊戲資料。 */
+.game_art_data .game_art_rowframe {
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    padding-top: 13px;
+
+    border-bottom: 2px solid var(--theme_searchbar_choose_color);
+
+    /* background-color: aqua; */
+}
+
+/* 遊戲資料的類別名稱。 */
+.game_art_data .game_art_rowframe p:first-child {
+    font-size: var(--theme_text_size);
+    text-shadow: var(--theme_text_shadow);
+    color: var(--theme_color_white);
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    text-align: left;
+    width: 35%;
+    display: inline-block;
+
+    /* background-color: red; */
+}
+
+/* 遊戲資料的類別內容。 */
+.game_art_data .game_art_rowframe p:last-child {
+
+    font-size: 18px; 
+    font-weight: 300;
+    text-shadow: var(--theme_text_shadow);
+    color: var(--theme_color_white);
+    letter-spacing: 2px;
+
+    text-align: left;
+    filter: brightness(90%);
+
+    width: 60%;
+    display: inline-block;
+
+    /* background-color: orange; */
+}
+
+.game_art_center .game_art_illustrate .game_art_describe {
+
+    flex: 1;    
+    padding-right: 20px;
+    
+    position: relative;
+
+    /* border: 1px solid chocolate; */
+}
+
+.game_art_illustrate .game_art_describe p:nth-of-type(1){
+    font-size: var(--theme_text_size);
+    text-shadow: var(--theme_text_shadow);
+    color: var(--theme_color_white);
+    font-weight: 500;
+
+    letter-spacing: 2px;
+    line-height: 32px;
+
+    text-align: left;
+    width: 100%;
+
+    margin-top: 13px;
+    margin-left: 20px;
+}
+
+.game_art_illustrate .game_art_describe p:nth-of-type(2){
+    font-size: 18px; 
+    font-weight: 300;
+    text-shadow: var(--theme_text_shadow);
+    color: var(--theme_color_white);
+    letter-spacing: 2px;
+    line-height: 32px;
+
+    text-align: left;
+    filter: brightness(90%);
+
+    margin-top: 13px;
+    margin-left: 20px;
+}
+
+.game_art_illustrate .game_art_describe .game_art_video{
+    /* width: 569px;
+    height: 320px; */
+
+    width: 100%;
+    height: 320px; 
+
+    margin-top: 72px;
+
+    position: absolute;
+    bottom: 125px;    
+    
+    /* background-color: red; */
+}
+
+.game_art_video video{
+
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+
+    object-fit: contain;
+
+    width: 569px;
+    height: 320px;
+}

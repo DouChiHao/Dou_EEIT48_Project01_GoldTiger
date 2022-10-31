@@ -1,0 +1,59 @@
+/* ======================================== article_style ======================================== */
+
+/* 置頂推廣圖左邊、中間、右邊的背景 */
+/* .toppromote_bgimg_left{
+    z-index: 6;   
+} */
+
+/* 置頂推廣圖橫幅 */
+/* .toppromote_banner{
+    z-index: 7; 
+} */
+
+/* 置頂圖片格裡的影片 */
+/*.toppromote_video{
+    z-index: 5;
+} */
+
+/* 置頂推廣圖左邊的背景上方的影片加載小提示 */
+/* .toppromote_prompt{
+    z-index: 7;
+} */
+
+/* 所有Gamelist swiperbar的輪播圖片層級 */
+/* .gamelist_childbarstyle{
+    z-index: 6;
+} */
+
+/* 輪播圖片上方的標題。 */
+/* .gamelist_childbartitle{
+    z-index: 7;
+} */
+
+/* 遊戲館圖層級 */
+/* .gamelist_gamecell img{
+    z-index: 6;
+} */
+
+/* 遊戲館圖拉開的影片及詳細資訊 */
+/* .gamelist_gamecelldetail{
+    z-index: 7;
+} */
+
+/* 搜尋欄下面出現的選項。 */
+/* .textbar_optionul{
+    z-index: 10;
+} */
+
+
+/* ======================================== article_game_style ======================================== */
+
+/* 置頂的背景圖層級。 */
+/* .game_art_top {
+    z-index: 5px;
+} */
+
+/* 取消模糊的層級 */
+/* .u-non-blurred {
+    z-index: 1;
+} */

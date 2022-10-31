@@ -1,0 +1,266 @@
+/* ======================================== article Main CSS ======================================== */
+
+body .contact_art {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    /* 預留選單固定高度。 */
+    margin-top: 72px;
+
+    /* 高度預抓。 */
+    height: 955px;
+    /* 示意使用。 */
+    /* border: 1px solid red; */
+
+}
+
+.contact_art .contact_art_left {
+    width: var(--theme_horizontal_left_width);
+
+    /* 示意使用。 */
+    height: 300px;
+    /* background-color: blue; */
+}
+
+.contact_art .contact_art_right {
+    width: var(--theme_horizontal_cell_width);
+
+    /* 示意使用。 */
+    height: 300px;
+    /* background-color: lawngreen; */
+}
+
+.contact_art .contact_art_center {
+
+    flex: 1;
+    height: 100%;
+
+    /* 示意使用。 */
+    /* border: 1px solid yellow; */
+}
+
+
+/* ======================================== article title ======================================== */
+
+/* 標題 */
+.contact_art .contact_art_center .art_center_maintitle {
+
+    width: 100%;
+
+    /* 示意使用。 */
+    /* border: 1px solid greenyellow; */
+}
+
+.art_center_maintitle div {
+
+    width: 100%;
+    height: 200px;
+
+    border-radius: var(--theme_border_radius);
+
+    margin: 50px 0px;
+    padding-top: 15px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+/* 標題文字內容。 */
+.art_center_maintitle div p {
+    text-align: center;
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    text-shadow: var(--theme_text_shadow);
+    color: var(--theme_color_white);
+    filter: brightness(90%);
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+    /* 設定文字行距。*/
+    /*line-height: 24px;*/
+    /* 設定文字間距 */
+    /* letter-spacing: 3px; */
+}
+
+
+/* ======================================== article contact ======================================== */
+
+.contact_art .contact_art_center .art_center_contactframe{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    /* 示意資訊。 */
+    height: 650px;
+    /* border: 1px solid blue; */
+}
+
+.art_center_contactframe .contactframe_left{
+    flex: 1;
+    height: 100%;
+
+    position: relative;
+
+    /* 示意使用。 */
+    /* border: 1px solid orchid; */
+}
+
+.art_center_contactframe .contactframe_inputtitle p{
+    color: var(--theme_color_white);
+    font-size: 18px; 
+    font-weight: 300;
+    text-shadow: var(--theme_text_shadow);
+    letter-spacing: 2px;
+    line-height: 32px;
+
+    margin-bottom: 30px;
+}
+
+
+.art_center_contactframe .contactframe_left .contactframe_inputframe{
+    width: 75%;
+    height: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* border: 1px solid lightsalmon; */
+}
+
+.contactframe_inputframe .contactframe_inputvalue p{
+    font-size: 16px;
+    font-weight: 200;
+    text-shadow: var(--theme_text_shadow);
+    color: red;
+    position: absolute;
+    right: 10px;
+
+    visibility: hidden;
+    /* visibility: visible; */
+}
+
+.contactframe_inputframe .contactframe_inputvalue p:nth-of-type(1){
+    top: 171px;
+}
+
+.contactframe_inputframe .contactframe_inputvalue p:nth-of-type(2){
+    top: 253px;
+}
+.contactframe_inputframe .contactframe_inputvalue p:nth-of-type(3){
+    top: 558px;
+}
+
+/* :nth-child(-1n+3)倒數第三個元素往回推到第一個元素。 */
+.contactframe_inputframe .contactframe_inputvalue input:nth-of-type(-1n+3){
+    width: 100%;
+    height: 57px;
+
+    font-size: 16px;
+    color: var(--theme_color_white);
+    border-radius: var(--theme_border_radius);
+    background-color: var(--theme_searchbar_background_color);
+    border: 1px solid var(--theme_searchbar_choose_color);
+
+    display: inline-block;
+    padding-left: 16px;
+
+    margin-top: 24px;
+
+}
+
+/* nth-child針對所有的子元素，nth-of-type選擇的子元素 */
+.contactframe_inputframe .contactframe_inputvalue input:nth-of-type(-1n+3):hover {
+    border: 1px solid rgb(170, 170, 170);
+}
+
+.contactframe_inputframe .contactframe_inputvalue input:nth-of-type(-1n+3):focus {
+    outline: none;
+    caret-color: var(--theme_color_white);
+}
+
+/* 當玩家點擊時，可以更改placeholder提示文字的顏色。 */
+.contactframe_inputframe .contactframe_inputvalue input:nth-of-type(-1n+3):focus::placeholder {
+    color: var(--theme_color_white);
+}
+
+/* 訊息內容欄位。 */
+.contactframe_inputframe .contactframe_inputvalue textarea{
+    width: 100%;
+    height: 200px;
+
+    font-size: 16px;
+
+    color: var(--theme_color_white);
+    border-radius: var(--theme_border_radius);
+    background-color: var(--theme_searchbar_background_color);
+    border: 1px solid var(--theme_searchbar_choose_color);
+
+    margin-top: 24px;
+    padding-left: 16px;
+    padding-top: 16px;
+
+    /* 禁用調整大小。 */
+    resize: none;
+}
+
+.contactframe_inputframe .contactframe_inputvalue textarea:hover{
+    border: 1px solid rgb(170, 170, 170);
+}
+
+.contactframe_inputframe .contactframe_inputvalue textarea:focus{
+    outline: none;
+    caret-color: var(--theme_color_white);
+}
+
+.contactframe_inputframe .contactframe_inputvalue textarea:focus::placeholder{
+    color: var(--theme_color_white);
+}
+
+/* 送出。 */
+.contactframe_inputframe .contactframe_inputvalue input:last-child{
+    width: 20%;
+    height: 36px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--theme_color_white);
+    border-radius: var(--theme_border_radius);
+    background-color: transparent;
+    border: 2px solid var(--theme_color_gold);
+
+    display: inline-block;
+
+    margin-top: 24px;
+
+    /* 讓滑鼠改變成可以點的樣式。 */
+    cursor: pointer;
+
+    transition: background-color 0.5s ease;
+}
+
+.contactframe_inputframe .contactframe_inputvalue input:last-child:hover{
+    background-color: var(--theme_color_gold);
+}
+
+.art_center_contactframe .contactframe_right{
+    flex: 1;
+    height: 100%;
+
+    /* 示意使用。 */
+    /* border: 1px solid green; */
+}
+
+.art_center_contactframe .contactframe_right img{
+    margin-top: 1px;
+    margin-left: 80px;
+}

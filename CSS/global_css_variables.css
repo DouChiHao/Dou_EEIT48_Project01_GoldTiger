@@ -1,0 +1,38 @@
+/* ======================================== CSS variables ======================================== */
+
+/* 宣告全域(:root)變數(--名稱)。 */
+:root {
+    --theme_color_white: #fff;
+    --theme_color_gold: #E0931F;
+    --theme_color_lightpurple: #988CE0;
+
+    --theme_navbar_background_color: #2D165F;
+    --theme_searchbar_background_color: #150832;
+    --theme_searchbar_choose_color: #453B86;
+
+    --theme_text_size: 20px;
+    --theme_text_shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+    --theme_drop_shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+
+    --theme_border_radius: 10px;
+
+    --theme_button_padding: 5px 15px;
+
+    --theme_slidebar_width: 17px;
+    --theme_horizontal_cell_width: 189px;
+    --theme_horizontal_left_width: 206px;
+    --theme_vertical_cell_height: 72px;
+
+}
+
+
+/* ======================================== Main CSS ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    /* 使元素總寬高為視覺總寬高，不受border及padding影響總寬高 */
+    box-sizing: border-box;
+}
+

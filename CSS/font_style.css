@@ -1,0 +1,9 @@
+/* ========== 微軟正黑體 fonts ========== */
+
+/* 參考網址：https://www.blog3c.net/blog/post/297317096-google-webfont-in-website */
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+
+body {
+    font-family:  'Noto Sans TC'!important;
+    font-weight: 400;
+}

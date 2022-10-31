@@ -1,0 +1,10 @@
+body {
+    background-image: url("../Image/BackGround/GameBG3.png");
+    /* background-size: cover; */
+
+    /* 控制圖片是否能隨著滾輪滾動。scroll是可以，fixed是不行。 */
+    /* background-attachment: scroll; */
+    background-attachment: scroll;   
+    background-position: center -750px;
+
+}

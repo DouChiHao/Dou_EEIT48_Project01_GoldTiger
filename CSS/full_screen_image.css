@@ -1,0 +1,246 @@
+
+/* ======================================== swiper_full_image ======================================== */
+
+.swiper_home {
+    /* 設定內容最小高度圍網頁高度，100vh=100%，故內容會維持全滿狀態。 */
+    min-height: 100vh;
+
+    /* (split)更改為fix頂端狀態。 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 990;
+
+    background-color: black;
+    transition: 0.5s ease;
+    transition-property: background-color;
+
+}
+
+.swiper_home.swiper_backgroundhidden {
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.bg_slider {
+    /* 比nav_bar的高度999還低。 */
+    z-index: 888;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.bg_slider .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* 圖片的屬性設定(現階段沒用到)。 */
+.bg_slider .swiper-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+    background-position: center;
+    background-size: cover;
+
+    /* 可以使滑鼠忽略圖片層，直接點擊到下一層物件。(待測試) */
+    pointer-events: none;
+}
+
+/* 影片的屬性設定。 */
+.bg_slider .swiper-slide video {
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+
+    /* visibility:hidden */
+}
+
+.swiper-slide-next video {
+    /* (split)更改為沒出現時，即為不顯示狀態。 */
+    filter: opacity(0%);
+}
+
+.swiper-slide-prev video {
+    /* (split)更改為沒出現時，即為不顯示狀態。 */
+    filter: opacity(0%);
+}
+
+.swiper-slide-active video {
+    transition: 0.5s ease-in-out;
+    filter: opacity(100%);
+}
+
+/* 不知道為甚麼設在這邊會失敗。 */
+/* #video_01_top{
+    z-index: 120;
+    visibility:visible;
+} */
+
+/* 影片的分割左邊。 */
+.leave_left {
+    /* 使用Clippy進行裁切該<div>屬性，非video */
+    clip-path: polygon(0 0, 35% 0, 65% 100%, 0% 100%);
+    visibility: hidden;
+}
+
+/* 影片的分割右邊。 */
+.leave_right {
+    /* 使用Clippy進行裁切該<div>屬性，非video */
+    clip-path: polygon(100% 0, 35% 0, 65% 100%, 100% 100%);
+    visibility: hidden;
+}
+
+
+.bg_slider .swiper-slide .swiper_text_content {
+    position: absolute;
+    z-index: 222;
+    bottom: var(--theme_vertical_cell_height);
+    /* color: var(--theme_color_gold); */
+
+    /* 現在側邊寬度顯示看起來不太正確。(待測試) */
+    margin: 0 var(--theme_horizontal_left_width);
+
+    /* 文字從左到右華出來的時間。 */
+    transition: 0.5s ease;
+
+}
+
+/* 大標題內容。 */
+.swiper-slide .swiper_text_content .swiper_text_title {
+    font-size: 112px;
+    color: var(--theme_color_white);
+    text-shadow: var(--theme_text_shadow);
+
+    /* 使元素垂直向上移動50px距離。 */
+    transform: translateX(-300px);
+    /* 設定元素的透明度為全透明。 */
+    opacity: 0;
+    /* 設定滑鼠移到上面樣式。 */
+    cursor: default;
+
+    /* 目前文字有無法修改間距，故無法調整與副標距離。 */
+    /* margin: 0; */
+}
+
+/* 大標題內容，在每次滑動時，會觸發的動畫。 */
+.swiper-slide-active .swiper_text_content .swiper_text_title {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.3s;
+    transition-property: transform, opacity;
+}
+
+
+/* 立即玩按鈕設定。 */
+.swiper_text_content .swiper_text_title a {
+    text-decoration: none;
+    font-size: var(--theme_text_size);
+    text-shadow: none;
+    color: var(--theme_color_white);
+    padding: var(--theme_button_padding);
+    border-radius: var(--theme_border_radius);
+    background-color: #cf8729;
+    margin-left: 35px;
+
+    cursor: pointer;
+
+    opacity: 0;
+}
+
+.swiper_text_content .swiper_text_title a:hover {
+    background-color: var(--theme_color_gold);
+    font-weight: 600;
+    text-shadow: var(--theme_text_shadow);
+    box-shadow: var(--theme_drop_shadow);
+    transition-duration: 0.2s;
+}
+
+/* 立即玩按鈕出現動畫。 */
+.swiper-slide-active .swiper_text_content .swiper_text_title a {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transition-delay: 1s;
+    transition-property: transform, opacity;
+}
+
+
+
+/* 副標題內容。 */
+.swiper-slide .swiper_text_content p {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--theme_color_gold);
+    text-shadow: var(--theme_text_shadow);
+
+    transform: translateX(-300px);
+    opacity: 0;
+    cursor: default;
+
+    /* transform: translateY(-20px); */
+
+    /* 目前文字有無法修改間距，故無法調整與副標距離。 */
+    /* margin: 0; */
+}
+
+/* 副標題內容，在每次滑動時，會觸發的動畫。 */
+.swiper-slide-active .swiper_text_content p {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.5s;
+    transition-property: transform, opacity;
+}
+
+/* ======================================== swiper_image_tumbs ======================================== */
+
+.bg_slider_thumbs {
+    z-index: 888;
+    position: absolute;
+    bottom: var(--theme_vertical_cell_height);
+
+    right: 0px;
+    margin-right: 189px;
+
+    /* 元素用最左邊置畫面中央。 */
+    /* left: 50%; */
+    /* 元素會偏右(因為使用元素最左邊置中)，這邊再將元素向左偏移一半元素的寬度，確保可以置畫面中央。 */
+    /* transform: translateX(-50%); */
+
+    /* 不確定使用時機。(待測試) */
+    transform: 0.3s ease;
+
+}
+
+.swiper_tumbs_container {
+    background-color: #1508327c;
+    backdrop-filter: blur(10px);
+    padding: 10px 3px;
+    border-radius: var(--theme_border_radius);
+    box-shadow: var(--theme_drop_shadow);
+}
+
+.swiper-slide-thumb-active {
+    border: 2px solid var(--theme_color_white);
+}
+
+.swiper_tumbs_container img {
+    width: 50px;
+    height: 35px;
+    margin: 0 5px;
+    border-radius: var(--theme_border_radius);
+
+    /* 可以點擊的滑鼠。 */
+    cursor: pointer;
+
+}

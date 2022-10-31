@@ -1,0 +1,153 @@
+/* ======================================== footer置底 ======================================== */
+
+body .footer_framestyle {
+    width: 100%;
+    height: 450px;
+    background-color: var(--theme_searchbar_background_color);
+
+    margin-top: 172px;
+    display: flex;
+}
+
+.footer_framestyle .footer_left {
+    width: var(--theme_horizontal_left_width);
+    height: 200px;
+
+    /* background-color: cornflowerblue;     */
+}
+
+.footer_framestyle .footer_right {
+    width: var(--theme_horizontal_cell_width);
+    height: 200px;
+
+    /* background-color: darkgoldenrod;     */
+}
+
+/* footer置底中央內容，用padding-top留空避免下方被推高。 */
+.footer_framestyle .footer_center {
+    padding-top: 42px;
+    flex: 1;
+    height: 100%;
+
+}
+
+.footer_center .footer_center_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 分隔線 */
+.ct_left_quicklink .footer_separateline {
+    width: 100%;
+    border-bottom: 2px solid var(--theme_color_white);
+    filter: brightness(70%);
+
+    margin: 10px 0px;
+
+}
+
+.footer_separateline {
+    width: 100%;
+    border-bottom: 2px solid var(--theme_color_white);
+    filter: brightness(70%);
+
+    margin: 40px 0px;
+
+}
+
+/* 左邊快速連結。 */
+.footer_center_top .ct_left {
+    width: 690px;
+    height: 200px;
+    /* background-color:blueviolet; */
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.ct_left .ct_left_quicklink {
+
+    width: 200px;
+    height: 100%;
+
+    /* border: 2px solid red; */
+
+}
+
+/* 左邊快速連結標題。 */
+.ct_left .ct_left_quicklink h3 {
+    font-size: var(--theme_text_size);
+    color: var(--theme_color_white);
+
+    filter: brightness(70%);
+}
+
+.ct_left .ct_left_quicklink a {
+    margin-top: 5px;
+    display: block;
+    color: var(--theme_color_white);
+    font-size: 16px;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.ct_left .ct_left_quicklink a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--theme_color_white);
+    transform: translateX(10px);
+}
+
+
+.footer_center_top .ct_right {
+    width: 250px;
+    height: 200px;
+    /* background-color:blue; */
+
+    padding-right: 16px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 社群小icon設定 */
+.footer_center_top .ct_right img {
+    width: 36px;
+    height: 36px;
+
+    /* brightness(%) 線性乘法，讓圖片看起來更暗或更亮 */
+    filter: brightness(70%);
+    transition: 0.3s ease;
+}
+
+.ct_right img:hover {
+    filter: none;
+}
+
+.footer_center .footer_center_bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_center_bottom div {
+    width: 400px;
+    height: 100px;
+
+    text-align: center;
+
+    /* background-color: brown; */
+}
+
+.footer_center_bottom img {
+    width: 176px;
+    height: 50px;
+}
+
+.footer_center_bottom P {
+    font-size: 14px;
+
+    color: var(--theme_color_white);
+    filter: brightness(70%);
+}

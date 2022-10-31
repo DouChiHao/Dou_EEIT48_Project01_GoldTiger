@@ -1,0 +1,133 @@
+
+
+/* ======================================== Header ======================================== */
+
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    transition: 0.3s ease;
+    transition-property: background-color;
+
+    /* 設定層級最高 */
+    z-index: 999;
+    /* 使浮動元素內的子物件垂直居中對齊父元素 */
+    justify-content: center;
+
+    /* 不確定高度設定5+1的原因 */
+    /* height: calc(5rem + 1rem); */
+    height: calc(72px);
+}
+
+header .nav_bar {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    /* 使浮動元素內的子物件水平居中對齊父元素 */
+    align-items: center;
+    /* 使浮動元素內的子物件頭尾切齊父元素，中間平均分配 */
+    justify-content: space-between;
+
+    /* ease 指定過渡的速度曲線：指定一個緩慢開始，然後快速，然後緩慢結束的過渡效果。 */
+    /* transform可以在給定的持續時間內平滑地更改屬性值。 */
+    transform: 0.3s ease;
+}
+
+.nav_bar .logo {
+    /* 設定左間距留出與拉條一樣寬度。 */
+    margin-left: var(--theme_slidebar_width);
+    filter: drop-shadow(var(--theme_drop_shadow));
+}
+
+/* ======================================== 選單:樣式設定 ======================================== */
+
+.navigation .nav_items {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    border-bottom: 2px solid var(--theme_color_white);
+    transition: 0.3s ease;
+    transition-property: border-bottom;
+}
+
+.navigation .nav_items a {
+    color: var(--theme_color_white);
+    font-size: var(--theme_text_size);
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+/* :not(:last-child)除了(:not)最後一個元素(:last-child)，其他元素都會套用效果，下方為，除了最後一個<a>，其他<a>都會套用效果。 */
+.navigation .nav_items a:not(:last-child) {
+    margin-right: 50px;
+}
+
+/* :nth-of-type(5)選擇子元素標籤為<a>且第5個元素。 */
+.navigation .nav_items a:nth-of-type(5) {
+    border: 2px solid #cf8729;
+    /* border-radius:是元素的圓角設定。 */
+    border-radius: var(--theme_border_radius);
+    padding: var(--theme_button_padding);
+}
+
+/* :last-of-type 選擇子元素標籤為<a>且最後一個元素。 */
+.navigation .nav_items a:last-of-type {
+    /* 與右邊拉條間隔17px，對齊LOGO */
+    margin-right: var(--theme_slidebar_width);
+    background-color: #cf8729;
+    border-radius: var(--theme_border_radius);
+    padding: var(--theme_button_padding);
+}
+
+
+/* ======================================== 選單:hover效果 ======================================== */
+
+/* :nth-child(-1n+4)從第四個子元素反向選取到第一個子元素。 */
+.navigation .nav_items a:nth-child(-1n+4):hover {
+    color: var(--theme_color_gold);
+    font-weight: 600;
+    text-shadow: var(--theme_text_shadow);
+
+}
+
+.navigation .nav_items a:nth-child(5):hover {
+    color: var(--theme_color_gold);
+    border-color: var(--theme_color_gold);
+    font-weight: 600;
+    text-shadow: var(--theme_text_shadow);
+    box-shadow: var(--theme_drop_shadow);
+}
+
+.navigation .nav_items a:last-of-type:hover {
+    background-color: var(--theme_color_gold);
+    font-weight: 600;
+    text-shadow: var(--theme_text_shadow);
+    box-shadow: var(--theme_drop_shadow);
+}
+
+/* ======================================== 選單:當前頁面元素 ======================================== */
+
+.navigation .nav_items .nav_item_choose {
+    color: var(--theme_color_gold);
+    font-weight: 600;
+    text-shadow: var(--theme_text_shadow);
+}
+
+/* ================================ Navigation bar effect on scroll ================================== */
+
+header.navbar_sticky {
+    /* 不太確定設定2.5 + 1原因為 */
+    /* height: calc(2.5rem + 1rem); */
+    height: calc(72px);
+    background-color: var(--theme_navbar_background_color);
+
+}
+
+.navigation .nav_items.nav_items_borderhidden {
+    border-bottom-color: transparent;
+}
+
